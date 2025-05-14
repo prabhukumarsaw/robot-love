@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5173:5173" # Map host port 5173 → container port 5173
+    volumes:
+      - .:/app      # Sync local files (for live reload)
+      - /app/node_modules # Isolate node_modules
+    environment:
+      - VITE_HOST=0.0.0.0 # Ensure Vite binds externally
+    restart: unless-stopped # Auto-recover on crashes
