@@ -8,7 +8,7 @@ const MainTitle = () => {
         fontSize: "3.2rem"
         
         }}>
-        I LOVE ROBOT
+        ROBOT Love HUMAN
     </h1>
   )
 }
